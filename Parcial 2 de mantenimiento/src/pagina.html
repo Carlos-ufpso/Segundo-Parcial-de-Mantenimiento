@@ -8,18 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#educacion">Educación</a></li>
-                <li><a href="#pasiones">Pasiones</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+
+<header>
+    <nav class="navbar">
+        <span class="nav-brand">Carlos</span>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+        <ul class="nav-menu">
+            <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#sobre-mi"><i class="fas fa-user"></i> Sobre Mí</a></li>
+            <li><a href="#habilidades"><i class="fas fa-code"></i> Habilidades</a></li>
+            <li><a href="#educacion"><i class="fas fa-graduation-cap"></i> Educación</a></li>
+            <li><a href="#pasiones"><i class="fas fa-heart"></i> Pasiones</a></li>
+            <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 
     <main>
         <section id="inicio" class="hero">
@@ -117,28 +125,99 @@
         </section>
     </main>
 
-    <footer id="contacto">
-        <section class="contact-info">
-            <h3>Contacto</h3>
-            <address>
-                <p><i class="fas fa-envelope"></i> perezcarlosjhosef@gmail.com </p>
-                <p><i class="fas fa-phone"></i> +57 315 523 0533</p>
-                <p><i class="fas fa-map-marker-alt"></i> Ocaña, Colombia</p>
-            </address>
-        </section>
-        
-        <section class="social">
-            <h3>Redes Sociales</h3>
-            <nav class="social-links">
-                <ul>
-                    <li><a href="https://github.com/Carlos-ufpso"><i class="fab fa-github"></i> GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/carlos-jhosef-perez-maldonado-481720339/"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                    <li><a href="https://www.instagram.com/carlosj_maldonado23/"><i class="fab fa-instagram"></i> Instagram</a></li>
-                </ul>
-            </nav>
-        </section>
-        
-        <small>&copy; 2024 [Carlos]. Todos los derechos reservados.</small>
-    </footer>
+<footer>
+    <section class="contact-info">
+        <h3>Información de Contacto</h3>
+        <address>
+            <p><i class="fas fa-envelope"></i> perezcarlosjhosef@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +57 315 523 0533</p>
+            <p><i class="fas fa-map-marker-alt"></i> Ocaña, Colombia</p>
+        </address>
+    </section>
+    
+    <section class="social-media">
+        <h3>Sígueme en redes sociales</h3>
+        <nav class="social-links">
+            <ul>
+                <li>
+                    <a href="https://github.com/Carlos-ufpso" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/carlos-jhosef-perez-maldonado-481720339/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/carlosj_maldonado23/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    
+    <!-- Formulario de contacto mejorado -->
+    <section id="contacto" class="contact-section">
+        <article class="contact-container">
+            <h2>Contáctame</h2>
+            <form action="#" method="POST" class="contact-form">
+                <fieldset class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required 
+                        placeholder="Ej: Juan Pérez">
+                </fieldset>
+    
+                <fieldset class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required 
+                        placeholder="ejemplo@correo.com">
+                </fieldset>
+    
+                <fieldset class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" 
+                        placeholder="Ej: +57 300 123 4567">
+                </fieldset>
+    
+                <fieldset class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="">Selecciona un asunto</option>
+                        <option value="colaboracion">Colaboración</option>
+                        <option value="proyecto">Proyecto</option>
+                        <option value="trabajo">Oportunidad laboral</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </fieldset>
+    
+                <fieldset class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required 
+                        placeholder="Escribe tu mensaje aquí..."></textarea>
+                </fieldset>
+    
+                <fieldset class="form-group checkbox-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="terminos" required>
+                        <span class="checkmark"></span>
+                        Acepto los términos y condiciones
+                    </label>
+                </fieldset>
+    
+                <footer class="form-group">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Enviar mensaje
+                    </button>
+                </footer>
+            </form>
+        </article>
+    </section>
+    <small>&copy; 2024 Carlos. Todos los derechos reservados.</small>
+</footer>
 </body>
 </html>
